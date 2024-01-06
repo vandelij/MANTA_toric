@@ -360,7 +360,7 @@ class toric_analysis:
 
         if (cx==1):
             fieldi = (self.__getvar__(componenti))#[:,:]
-            field=np.array(field)+np.complex(0.,1.)*np.array(fieldi)
+            field=np.array(field)+complex(0.,1.)*np.array(fieldi)
 
         rad   = self.__getvar__(radius)
 
@@ -510,7 +510,7 @@ class toric_analysis:
 
         if (im):
             im_e2d=(self.cdf_hdl.variables[im_e2dname]).data 
-            e2d = abs(e2d+np.complex(0.,1.)*im_e2d)
+            e2d = abs(e2d+complex(0.,1.)*im_e2d)
 
         if (self.mode[:2]!='LH' and species):
             print('plot2D, indexing species', species)
